@@ -7,4 +7,4 @@ Student Info
 =======================
 
 * Name: Le Minh Anh
-* ID: USTHBI7-007 .
+* ID: USTHBI7-007
