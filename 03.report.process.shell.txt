@@ -1,0 +1,70 @@
+minhanh@minhanh-Inspiron-5559:~$ ps -f
+UID        PID  PPID  C STIME TTY          TIME CMD
+minhanh   2276  2269  0 22:57 pts/2    00:00:00 bash
+minhanh   2445  2276  0 22:59 pts/2    00:00:00 ps -f
+minhanh@minhanh-Inspiron-5559:~$ gnome-calculator
+minhanh@minhanh-Inspiron-5559:~$ ps aux | grep -i gnome-calculator | awk {'print$2'}
+2578
+2596
+minhanh@minhanh-Inspiron-5559:~$ cat /proc/2578/status
+Name:	gnome-calculato
+Umask:	0002
+State:	S (sleeping)
+Tgid:	2578
+Ngid:	0
+Pid:	2578
+PPid:	2567
+TracerPid:	0
+Uid:	1000	1000	1000	1000
+Gid:	1000	1000	1000	1000
+FDSize:	256
+Groups:	4 24 27 30 46 113 128 1000 
+NStgid:	2578
+NSpid:	2578
+NSpgid:	2578
+NSsid:	2567
+VmPeak:	  712856 kB
+VmSize:	  647320 kB
+VmLck:	       0 kB
+VmPin:	       0 kB
+VmHWM:	   34596 kB
+VmRSS:	   34596 kB
+RssAnon:	    6772 kB
+RssFile:	   27780 kB
+RssShmem:	      44 kB
+VmData:	   47712 kB
+VmStk:	     132 kB
+VmExe:	     392 kB
+VmLib:	   60692 kB
+VmPTE:	     524 kB
+VmPMD:	      16 kB
+VmSwap:	       0 kB
+HugetlbPages:	       0 kB
+Threads:	4
+SigQ:	0/30560
+SigPnd:	0000000000000000
+ShdPnd:	0000000000000000
+SigBlk:	0000000000000000
+SigIgn:	0000000000001000
+SigCgt:	0000000180000000
+CapInh:	0000000000000000
+CapPrm:	0000000000000000
+CapEff:	0000000000000000
+CapBnd:	0000003fffffffff
+CapAmb:	0000000000000000
+NoNewPrivs:	0
+Seccomp:	0
+Cpus_allowed:	f
+Cpus_allowed_list:	0-3
+Mems_allowed:	00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001
+Mems_allowed_list:	0
+voluntary_ctxt_switches:	381
+nonvoluntary_ctxt_switches:	102
+minhanh@minhanh-Inspiron-5559:~$ cat /proc/2596/status
+cat: /proc/2596/status: No such file or directory
+minhanh@minhanh-Inspiron-5559:~$ kill -STOP 2578
+minhanh@minhanh-Inspiron-5559:~$ kill -CONT 2578
+minhanh@minhanh-Inspiron-5559:~$ kill -KILL2578
+bash: kill: KILL2578: invalid signal specification
+minhanh@minhanh-Inspiron-5559:~$ kill -KILL 2578
+
