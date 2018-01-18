@@ -1,0 +1,8 @@
+minhanh@minhanh-Inspiron-5559:~$ cat /proc/sched_debug | grep "systemd "
+         systemd     1       374.833580      1677   120         0.000000      1183.445296         0.000000 0 0 /autogroup-2
+         systemd  1226         3.361706        14   120         0.000000        13.886506         0.000000 0 0 /autogroup-97
+minhanh@minhanh-Inspiron-5559:~$ cat /proc/1/sched | grep 'switches'
+nr_switches                                  :                 1677
+nr_voluntary_switches                        :                 1365
+nr_involuntary_switches                      :                  312
+
