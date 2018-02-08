@@ -43,11 +43,7 @@ item *consume() {
 	sem_post(&sem);
 	return i;
 }
-int pthread_create(
-	pthread_t *thread,
-	const pthread_attr_t *attr,
-	void *(*start_routine) (void *),
-	void *arg);
+
 //Create a new thread for producer, produce 3 items
 void *threadproduceFunction(void *param) {
 	item i1,i2,i3;
